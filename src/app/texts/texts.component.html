@@ -1,0 +1,17 @@
+<h2>Text Transition</h2>
+
+<div class="actions">
+  <button mat-raised-button (click)="slideMessage()">Slide</button>
+  <button mat-raised-button (click)="flipMessage()">Flip</button>
+  <button mat-raised-button (click)="bounceMessage()">Bounce</button>
+  <button mat-raised-button (click)="defaultMessage()">Default</button>
+  <button mat-icon-button (click)="triggerTransition()">
+    <mat-icon>bolt</mat-icon>
+  </button>
+</div>
+
+<div class="text-transition-container">
+  <h1 transition [ngClass]="messageTransitionClass()">
+    {{ message() | withTransition }}
+  </h1>
+</div>

@@ -1,0 +1,28 @@
+@keyframes clip {
+  from {
+    clip-path: rect(0 100% 100% 0%);
+  }
+  to {
+    clip-path: rect(0 100% 100% 100%);
+  }
+}
+
+@keyframes reveal {
+  from {
+    clip-path: rect(0 0 100% 0);
+  }
+  to {
+    clip-path: rect(0 100% 100% 0);
+  }
+}
+
+::view-transition-new(*.slide) {
+  width: auto;
+  clip-path: rect(0 0 100% 0);
+  animation: 500ms 10ms linear forwards reveal;
+}
+
+::view-transition-old(*.slide) {
+  width: auto;
+  animation: 500ms linear forwards clip;
+}

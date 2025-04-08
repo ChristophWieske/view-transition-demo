@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0.5rem;
+  font-size: 12px;
+  box-sizing: border-box;
+  gap:0.25rem;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sub-title {
+  color: gray;
+}
+
+.container {
+  flex: 1 1  0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.progress {
+  flex: 1;
+  background: rgba(0,0,0,0.1) !important;
+  height: 14px;
+}

@@ -1,0 +1,28 @@
+@keyframes rotateOut {
+  from {
+    transform: rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateY(90deg) rotateZ(-5deg);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotateY(270deg) rotateZ(5deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateZ(0deg);
+  }
+}
+
+::view-transition-new(*.flip) {
+  transform: rotateY(270deg);
+  animation: 150ms 150ms linear forwards rotateIn;
+  transform-origin: center center;
+}
+
+::view-transition-old(*.flip) {
+  animation: 150ms linear forwards rotateOut;
+  transform-origin: center center;
+}

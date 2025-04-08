@@ -1,0 +1,12 @@
+<div class="actions">
+  <button mat-raised-button (click)="shuffle()">Shuffle</button>
+  <button mat-raised-button (click)="add(1)">Add</button>
+</div>
+
+<div class="tiles">
+  @for (tile of tiles(); track tile) {
+    <div class="tile" transition (click)="remove(tile)" [ngClass]="tile.size">
+      <ng-container *ngComponentOutlet="tile.component" />
+    </div>
+  }
+</div>

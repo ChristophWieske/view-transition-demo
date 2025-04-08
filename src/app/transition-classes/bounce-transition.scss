@@ -1,0 +1,31 @@
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+::view-transition-new(*.bounce) {
+  width: auto;
+  transform: scale(0);
+  animation: 200ms 200ms linear forwards scaleIn;
+}
+
+::view-transition-old(*.bounce) {
+  width: auto;
+  animation: 200ms linear forwards scaleOut;
+}

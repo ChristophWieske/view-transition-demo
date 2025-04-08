@@ -1,0 +1,37 @@
+:host {
+  padding: 1rem;
+  display: block;
+}
+
+.text-transition-container {
+  background: #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+
+  h1 {
+    display: block;
+    font-size: 4em;
+    flex: 1;
+    text-align: center;
+    text-shadow: #fff 5px 5px 5px;
+  }
+
+  h1.slide {
+    view-transition-class: slide;
+  }
+
+  h1.flip {
+    view-transition-class: flip;
+  }
+
+  h1.bounce {
+    view-transition-class: bounce;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+}
