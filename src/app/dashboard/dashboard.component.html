@@ -4,7 +4,7 @@
 </div>
 
 <div class="tiles">
-  @for (tile of tiles(); track tile) {
+  @for (tile of tiles() | withTransition; track tile) {
     <div class="tile" transition (click)="remove(tile)" [ngClass]="tile.size">
       <ng-container *ngComponentOutlet="tile.component" />
     </div>

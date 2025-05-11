@@ -5,6 +5,7 @@ import { ProgressComponent } from './tiles/progress/progress.component';
 import { NgClass, NgComponentOutlet } from '@angular/common';
 import { LineChartComponent } from './tiles/line-chart/line-chart.component';
 import { GaugeComponent } from './tiles/gauge/gauge.component';
+import { WithTransitionPipe } from '../transition/with-transition.pipe';
 import { ThermometerComponent } from './tiles/thermometer/thermometer.component';
 
 declare type Size = 'small' | 'medium' | 'large';
@@ -27,7 +28,13 @@ const TILES: Tile[] = [
 
 @Component({
   selector: 'app-dashboard',
-  imports: [TransitionDirective, MatButton, NgComponentOutlet, NgClass],
+  imports: [
+    TransitionDirective,
+    MatButton,
+    NgComponentOutlet,
+    NgClass,
+    WithTransitionPipe,
+  ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })
